@@ -608,6 +608,7 @@ section {
   filter: drop-shadow(0 0 3px var(--accent-cyan));
 }
 
+
 .project-title {
   font-size: 1.4rem;
   font-weight: 600;

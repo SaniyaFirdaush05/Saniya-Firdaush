@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function initTypingAnimation() {
   const typingText = document.getElementById('typing-text');
   const titles = [
-    "Google Gemini Student Ambassador",
-    "Delhi University B.Sc. CS Student",
+    "Google Student Ambassador",
+    "Delhi University CS Student",
     "Tech Enthusiast & Learner",
-    "Aspiring AI/ML Developer"
+    "Aspiring AI/ML Developer",
+    "GeeksforGeeks Campus Mantri",
+    "AWS Student Builder Campus Leader",
   ];
   let titleIndex = 0;
   let charIndex = 0;
@@ -433,33 +435,56 @@ function initContactForm() {
 
   if (!contactForm || !submitBtn) return;
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // Visual submit sequence
+
+    const name = document.getElementById('form-name').value.trim();
+    const email = document.getElementById('form-email').value.trim();
+    const message = document.getElementById('form-message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please complete all fields before sending your message.');
+      return;
+    }
+
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'sending_payload...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      // Simulate successful submit
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to send your message right now.');
+      }
+
       submitBtn.textContent = 'success_sent!';
       submitBtn.style.borderColor = 'var(--accent-emerald)';
       submitBtn.style.color = 'var(--accent-emerald)';
-      
-      // Alert/notification
-      alert('Message simulated as sent! Saniya will receive this details.');
+      alert('Message sent! I will receive it by email shortly.');
 
-      // Reset form
       contactForm.reset();
-
+    } catch (error) {
+      submitBtn.textContent = 'send_failed!';
+      submitBtn.style.borderColor = 'var(--accent-rose)';
+      submitBtn.style.color = 'var(--accent-rose)';
+      alert(error.message || 'Unable to send the message. Please try again later.');
+    } finally {
       setTimeout(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         submitBtn.style.borderColor = '';
         submitBtn.style.color = '';
       }, 3000);
-    }, 1500);
+    }
   });
 }
 
