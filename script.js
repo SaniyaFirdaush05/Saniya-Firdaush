@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initMobileMenu();
   initNavigationScroll();
+  initSectionAnimations();
 });
 
 /* ==========================================
@@ -551,4 +552,26 @@ function initNavigationScroll() {
       }
     });
   });
+}
+
+function initSectionAnimations() {
+  const sections = document.querySelectorAll('.section-animate');
+
+  if (!('IntersectionObserver' in window)) {
+    sections.forEach(section => section.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.18,
+  });
+
+  sections.forEach(section => observer.observe(section));
 }

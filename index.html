@@ -32,7 +32,7 @@
         <li><a href="#experience">// Experience</a></li>
         <li><a href="#playground">// Playground</a></li>
         <li><a href="#skills">// Skills</a></li>
-        <li><a href="#contact">// Contact</a></li>
+        <li><a href="#certificates">// Certificates</a></li>
       </ul>
 
       <div class="social-icons-nav">
@@ -68,8 +68,8 @@
   </header>
 
   <!-- Hero Section with Interactive Terminal -->
-  <section id="hero">
-    <div class="hero-content">
+  <section id="hero" class="section-animate">
+    <div class="hero-content animate-fade-up">
       <span class="hero-greeting">const developer = {</span>
       <h1 class="hero-name">Saniya Firdaush</h1>
       <div class="hero-title-scroller">
@@ -132,13 +132,13 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
+  <section id="projects" class="section-animate">
     <div class="section-header">
       <span class="section-tag">Explore my repositories</span>
       <h2 class="section-title">Featured Projects</h2>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-grid animate-fade-up">
       <!-- Project 1: ProdigyAI -->
       <div class="project-card">
         <div>
@@ -255,13 +255,13 @@
   </section>
 
   <!-- Experience & Profile Section -->
-  <section id="experience">
+  <section id="experience" class="section-animate">
     <div class="section-header">
       <span class="section-tag">My Journey</span>
       <h2 class="section-title">Experience & Education</h2>
     </div>
 
-    <div class="timeline-container">
+    <div class="timeline-container animate-fade-up">
       <!-- Left Column: Experience -->
       <div class="timeline-column">
         <h3 class="column-title">// professional experience</h3>
@@ -373,13 +373,13 @@
   </section>
 
   <!-- Interactive AI/ML Playground Section -->
-  <section id="playground">
+  <section id="playground" class="section-animate">
     <div class="section-header">
       <span class="section-tag">Interactive Simulation</span>
       <h2 class="section-title">AI/ML Playground</h2>
     </div>
 
-    <div class="playground-container">
+    <div class="playground-container animate-fade-up">
       <div class="playground-controls">
         <div class="playground-tabs">
           <button class="playground-tab active" data-tab="glucose">Glucose Predictor</button>
@@ -502,13 +502,13 @@
   </section>
 
   <!-- Skills Matrix Section -->
-  <section id="skills">
+  <section id="skills" class="section-animate">
     <div class="section-header">
       <span class="section-tag">My technical stack</span>
       <h2 class="section-title">Skills Matrix</h2>
     </div>
 
-    <div class="skills-container">
+    <div class="skills-container animate-fade-up">
       <!-- Category 1: Technical Stack -->
       <div class="skill-category">
         <h3 class="category-title">
@@ -663,68 +663,41 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+  <!-- Certificates Section -->
+  <section id="certificates" class="section-animate">
     <div class="section-header">
-      <span class="section-tag">Let's connect</span>
-      <h2 class="section-title">Get In Touch</h2>
+      <span class="section-tag">Verified Credentials</span>
+      <h2 class="section-title">Certificates</h2>
     </div>
 
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <p class="contact-text">
-          I am always open to discussing new opportunities, collaboration on open-source projects, hackathons, or chat
-          about AI/ML advancements. Feel free to shoot a message through the terminal!
-        </p>
-        <div class="contact-details">
-          <a href="https://www.linkedin.com/SaniyaFirdaush" target="_blank" class="contact-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-            linkedin.com/SaniyaFirdaush
-          </a>
-          <a href="https://github.com/SaniyaFirdaush05" target="_blank" class="contact-item">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-              </path>
-            </svg>
-            github.com/SaniyaFirdaush05
-          </a>
+    <div class="certificates-grid animate-fade-up">
+      <div class="certificate-card">
+        <div class="certificate-meta">
+          <h3 class="certificate-title">Tailwind CSS Essentials</h3>
+          <div class="certificate-org">Devtown • 2025</div>
         </div>
+        <a class="certificate-link" href="#" target="_blank" aria-label="View Certificate">View</a>
       </div>
 
-      <!-- Developer style interactive email contact form -->
-      <div class="contact-terminal-form">
-        <form id="contact-form">
-          <div class="form-row">
-            <span class="form-key">contact.name:</span>
-            <div class="form-input-wrapper">
-              <input type="text" id="form-name" class="form-input" placeholder="&quot;Your Name&quot;" required
-                autocomplete="off">
-            </div>
-          </div>
-          <div class="form-row">
-            <span class="form-key">contact.email:</span>
-            <div class="form-input-wrapper">
-              <input type="email" id="form-email" class="form-input" placeholder="&quot;you@example.com&quot;" required
-                autocomplete="off">
-            </div>
-          </div>
-          <div class="form-row" style="flex-direction: column; gap: 0.5rem;">
-            <span class="form-key">contact.message:</span>
-            <textarea id="form-message" class="form-textarea" placeholder="// Type your message here..."
-              required></textarea>
-          </div>
-          <div class="submit-btn-line">
-            <button type="submit" class="btn-terminal-submit" id="form-submit-btn">submit_message()</button>
-          </div>
-        </form>
+      <div class="certificate-card">
+        <div class="certificate-meta">
+          <h3 class="certificate-title">Geo-data Sharing Program</h3>
+          <div class="certificate-org">ISRO • 2024</div>
+        </div>
+        <a class="certificate-link" href="#" target="_blank" aria-label="View Certificate">View</a>
+      </div>
+
+      <div class="certificate-card">
+        <div class="certificate-meta">
+          <h3 class="certificate-title">AI Foundations Bootcamp</h3>
+          <div class="certificate-org">Devtown • 2024</div>
+        </div>
+        <a class="certificate-link" href="#" target="_blank" aria-label="View Certificate">View</a>
       </div>
     </div>
   </section>
+
+  
 
   <!-- Footer -->
   <footer>
