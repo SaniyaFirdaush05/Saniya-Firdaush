@@ -139,7 +139,7 @@ on responsibilities to grow professionally.
 <span class="terminal-output-accent">--- ACHIEVEMENTS & CERTIFICATIONS ---</span>
   - Represented Google Gemini at AI Impact Summit 2026 as a Student Ambassador.
   - 1st Rank in Photography competition organised by ECO CLUB of Vivekananda College (2025).
-  - Achieved 3rd rank in Inter-college Debate Competition "AI in Education: Boon or Bane" (SATTVA CS Society, 2024).
+  - Achieved 2nd rank in Inter-college Debate Competition "AI in Education: Boon or Bane" (SATTVA CS Society, 2024).
   - <span class="neon-text-cyan">Credentials:</span> Tailwind CSS (Devtown), Geo-data sharing & Cyber Security (ISRO), AI (Devtown).
 `,
     projects: () => `
